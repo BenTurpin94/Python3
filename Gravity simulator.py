@@ -11,22 +11,22 @@ total_time=int(input("select total time"))
 
 # this is a funtion so needs to be called like accelerationx(force, mass, angle) or wont work
 def accelerationx(force,angle,mass):
-    int(force*math.cos(angle)/mass)
+    return int(force*math.cos(angle)/mass)
 
 # this is a value so can be called without the brackets
 accelerationy=-9.81
 
 def velocityx(accelerationx,time):
-    int(accelerationx(force, mass, angle)*time)
+    return int(accelerationx(force, mass, angle)*time)
 
 def velocityy(accelerationy,time):
-    int(accelerationy*time)
+    return int(accelerationy*time)
 
 def distancex(accelerationx,time):
-    int(0.5*accelerationx(force, mass, angle)*time**2)
+    return int(0.5*accelerationx(force, mass, angle)*time**2)
 
 def distancey(accelerationy, time):
-    int(0.5*accelerationy*time**2)
+    return int(0.5*accelerationy*time**2)
 
 time=0
 while time < total_time:
