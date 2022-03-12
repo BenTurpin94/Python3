@@ -2,12 +2,20 @@ import math
 from operator import mod
 
 
+def main()
+    angle = int(input("Enter angle of ball"))
+    force  = int(input("Enter force of ball"))
+    mass= int(input("mass of ball"))
+    time_interval=int(input("select time intervals"))
+    total_time=int(input("select total time"))
+    
+    time=0
+    while time < total_time:
+        print("Acceleration at time t=",time, "(",accelerationx(force,angle,mass),accelerationy,")")
+        print("Velocity at time t=",time,"(",velocityx(accelerationx,time),velocityy(accelerationy,time),")")
+        print("Posesion at time t=",time,"(",distancex(accelerationx,time),distancey(accelerationy,time),")")
+        time += time_interval
 
-angle = int(input("Enter angle of ball"))
-force  = int(input("Enter force of ball"))
-mass= int(input("mass of ball"))
-time_interval=int(input("select time intervals"))
-total_time=int(input("select total time"))
 
 # this is a funtion so needs to be called like accelerationx(force, mass, angle) or wont work
 def accelerationx(force,angle,mass):
@@ -28,16 +36,9 @@ def distancex(accelerationx,time):
 def distancey(accelerationy, time):
     return int(0.5*accelerationy*time**2)
 
-time=0
-while time < total_time:
-    print("Acceleration at time t=",time, "(",accelerationx(force,angle,mass),accelerationy,")")
-    print("Velocity at time t=",time,"(",velocityx(accelerationx,time),velocityy(accelerationy,time),")")
-    print("Posesion at time t=",time,"(",distancex(accelerationx,time),distancey(accelerationy,time),")")
-    time += time_interval
 
-
-
-
+if __name__ == "__main__":
+    main()
 
 
 
